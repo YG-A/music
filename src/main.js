@@ -2,6 +2,11 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import fastclick from 'fastclick'
+import './assets/css/base.scss'
+
+// 解决移动端点击事件延迟问题
+fastclick.attach(document.body)
 
 Vue.config.productionTip = false
 
