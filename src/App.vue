@@ -1,20 +1,30 @@
 <template>
   <div id="app">
-    <div class="box"></div>
-    <div>我是段落哦</div>
+    <Header></Header>
+    <TabBar></TabBar>
+    <keep-alive :include="['Singer','Search']">
+      <router-view></router-view>
+    </keep-alive>
+    <Player></Player>
   </div>
 </template>
 
 <script>
+import Header from './components/Header.vue'
+import TabBar from './components/TabBar.vue'
+import Player from './views/Player'
 
 export default {
+  name: 'App',
+  components: {
+    Header, TabBar, Player
+  },
+  methods: {
+
+  }
 }
 </script>
 
-<style lang="scss">
-  .box{
-    width: 100px;
-    height: 100px;
-    background-color:red;
-  }
+<style lang="scss" scoped>
+  @import './assets/css/variable.scss';
 </style>

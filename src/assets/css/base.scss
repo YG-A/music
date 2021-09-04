@@ -8,13 +8,17 @@ html, body{
   overflow: hidden;
   // 解决IScroll拖拽卡顿问题
   touch-action: none;
+  user-select: none;
 }
 body{
-  @include font_size($font_medium);
-  //@include font_size(50px);
-  //font-size: 50px;
+  // @include font_size($font_medium);
+  // @include font_size(50px);
+  // font-size: 50px;
   font-family: Helvetica,sans-serif,STHeiTi;
 }
 img{
   vertical-align: bottom;
+}
+a{
+  -webkit-tap-highlight-color: transparent;
 }
